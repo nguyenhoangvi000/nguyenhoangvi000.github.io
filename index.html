@@ -33,7 +33,8 @@
     </div>
     <div id="display">
         <div id="work">
-            <h1>My Work.</h1>
+            <h1>Coding and always will be...</h1>
+            <h2>My Work.</h1>
             <div class="projects" id="work_section">
                 <a href="https://wizylance.com/" target="_blank">
                     <section>
@@ -137,8 +138,8 @@
                 document.getElementById("loading").classList.remove("animated");
                 document.getElementById("loading").classList.remove("fadeOut");
                 document.getElementById("loading").style.display = "none";
-            }, 800);
-        }, 1500);
+            }, 50);
+        }, 50);
         $.getJSON("blog.json", function (blog) {
             blog = blog || [];
             if (blog.length == 0) {
