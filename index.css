@@ -13,6 +13,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.my-work {
+  margin-top: 40px;
+}
+
 .blinker {
   animation-name: blinker;
   animation-iteration-count: infinite;
@@ -26,8 +30,13 @@ body {
   background: black;
 }
 
-@keyframes blinker { 
-    from { opacity: 1.0; } to { opacity: 0.0; }
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 #loading {

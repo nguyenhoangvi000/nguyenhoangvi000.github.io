@@ -34,8 +34,8 @@
     <div id="display">
         <div id="work">
             <h1>Coding and always will be...<span class="blinker"></span></h1>
-            <br/>
-            <h1>_My Work_</h1>
+            <hr />
+            <h1 class="my-work">My Work.</h1>
             <div class="projects" id="work_section">
                 <a href="https://wizylance.com/" target="_blank">
                     <section>
@@ -69,7 +69,8 @@
                     <section>
                         <div class="section_title">Skolon</div>
                         <div class="about_section">
-                            <span>Digital learning for everyone. All digital learning materials and learning resources in one place, Schools is the easiest way to work digitally in school.</span>
+                            <span>Digital learning for everyone. All digital learning materials and learning resources
+                                in one place, Schools is the easiest way to work digitally in school.</span>
                         </div>
                         <div class="bottom_section">
                             <span><i class="fas fa-code"></i>&nbsp; JavaScript</span>
@@ -82,7 +83,9 @@
                     <section>
                         <div class="section_title">Wizy Vietnam</div>
                         <div class="about_section">
-                            <span>Wizy helps develop digital business more efficiently, powered by Vietnamese digital top talents. We focus on Web Development, App Development and UI Design with highly proficiency.</span>
+                            <span>Wizy helps develop digital business more efficiently, powered by Vietnamese digital
+                                top talents. We focus on Web Development, App Development and UI Design with highly
+                                proficiency.</span>
                         </div>
                         <div class="bottom_section">
                             <span><i class="fas fa-code"></i>&nbsp; JavaScript</span>
@@ -95,7 +98,9 @@
                     <section>
                         <div class="section_title">Tri Shiba</div>
                         <div class="about_section">
-                            <span>Calligraphy came to Shiba by chance. When I was still a graphic designer, Shiba was given a pretty fancy pen from one of my brothers, which changed the entire life Shiba since then.</span>
+                            <span>Calligraphy came to Shiba by chance. When I was still a graphic designer, Shiba was
+                                given a pretty fancy pen from one of my brothers, which changed the entire life Shiba
+                                since then.</span>
                         </div>
                         <div class="bottom_section">
                             <span><i class="fas fa-code"></i>&nbsp; Wordpress</span>
@@ -108,7 +113,8 @@
                     <section>
                         <div class="section_title">Appspotr</div>
                         <div class="about_section">
-                            <span>Create epic apps without coding. Quickly build custom apps for iOS and Android without compromising on quality or design.</span>
+                            <span>Create epic apps without coding. Quickly build custom apps for iOS and Android without
+                                compromising on quality or design.</span>
                         </div>
                         <div class="bottom_section">
                             <span><i class="fas fa-code"></i>&nbsp; JavaScript</span>
@@ -141,29 +147,6 @@
                 document.getElementById("loading").style.display = "none";
             }, 50);
         }, 50);
-        $.getJSON("blog.json", function (blog) {
-            blog = blog || [];
-            if (blog.length == 0) {
-                return document.getElementById("blog_section").style.display = "none";
-            }
-            for (var i = 0; i < blog.length; i++) {
-                $("#blogs").append(`
-            <a href="./blog/${blog[i].url_title}/" target="_blank">
-                <section>
-                    <img src="${blog[i].top_image}">
-                    <div class="blog_container">
-                        <div class="section_title">${blog[i].title}</div>
-                        <div class="about_section">
-                            ${blog[i].sub_title}
-                        </div>
-                    </div>
-                </section>
-            </a>
-            `);
-            }
-        }).fail(function () {
-            return document.getElementById("blog_section").style.display = "none";
-        });
     </script>
 
 </body>
